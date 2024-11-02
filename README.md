@@ -10,7 +10,7 @@ Repository holding code for Figures 1-4 for Sklavenitis-Pistofidis<sup>\*</sup>,
 > **Figure 4.** Expression-based classification of MYD88-mutant WM tumors reveals subtypes of disease and identifies expression signatures associated with progression.
 
 ## Data availability
--Source data are provided with the paper. 
+-Source data to reproduce figures are provided with the paper. 
 
 -Raw and processed single-cell RNA and BCR sequencing data generated for this study are deposited in dbGaP (study site; hyperlink). 
 
