@@ -169,7 +169,7 @@ cxcr4_agg <- aggregate(plotdf$CXCR4_exp, list(plotdf$Tumor), median)
 plotdf$Tumor <- factor(plotdf$Tumor, levels = cxcr4_agg$Group.1[order(cxcr4_agg$x, decreasing = T)])
 plotdf$CXCR4_mut <- factor(plotdf$CXCR4_mut, levels = c("Mut", "WT", "Unknown"))
 df <- data.frame(table(plotdf$Tumor))
-df$Var1 <- factor(df$Var1, levels = levels(plotdf$Tumor)[ord])
+df$Var1 <- factor(df$Var1, levels = levels(plotdf$Tumor))
 df <- df[order(df$Var1),]
 df$CXCR4_mut <- plotdf$CXCR4_mut[match(df$Var1, plotdf$Tumor)]
 df$CXCR4_mut <- factor(df$CXCR4_mut, levels = c("Mut", "WT", "Unknown"))
