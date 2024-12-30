@@ -18,7 +18,7 @@ Repository holding code for main and supplemental figures from: **Sklavenitis-Pi
 ## Data availability
 -Source data to reproduce figures are provided with the paper. 
 
--Raw and processed single-cell RNA and BCR sequencing data generated for this study are deposited in dbGaP (study site; hyperlink). 
+-Raw and processed single-cell RNA and BCR sequencing data generated for this study are deposited in dbGaP (phs003787.v1.p1; https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs003787.v1.p1). 
 
 -Raw single-cell RNA sequencing data generated in Zavidij et al. (DOI: 10.1038/s43018-020-0053-3) are deposited in dbGaP (phs001323.v3.p1; https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs001323.v3.p1). 
 
