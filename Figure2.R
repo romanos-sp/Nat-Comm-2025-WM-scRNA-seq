@@ -35,6 +35,8 @@ plotdf$tissue <- ifelse(plotdf$TissueType == "BM", "BMMCs", "PBMCs")
 plotdf$Lab <- paste0(plotdf$Status, " ", plotdf$tissue, ", ", plotdf$condition)
 plotdf$Lab <- factor(plotdf$Lab, levels = c("AWM BMMCs, Media only", "AWM BMMCs, IFN+", "AWM PBMCs, Media only", "AWM PBMCs, IFN+", "HD BMMCs, Media only", "HD BMMCs, IFN+"))
 write.csv(plotdf, paste0(output_dir, "T_NK_Data.csv"), row.names = T)
+nrow(plotdf)
+##27,239
 png(paste0(output_dir, "UMAP_Annotated_Facet.png"), res = 300, units="in",width = 5, height = 5)
 ggplot(plotdf[plotdf$UMAP_1 < 3 & plotdf$UMAP_2 > -7.5,],aes(UMAP_1, UMAP_2)) + 
   geom_point(aes(color=factor(Cell_Type)), show.legend = F) +

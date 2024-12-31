@@ -234,6 +234,9 @@ plotdf$Disease <- as.character(plotdf$Disease)
 plotdf$Disease[plotdf$Disease %in% "NBM"] <- "HD"
 plotdf$Disease <- factor(plotdf$Disease, levels = c("HD", "SMM", "AWM"))
 write.csv(plotdf, paste0(output_dir, "IFNsig_T_Data.csv"), row.names = T)
+table(plotdf$Disease)
+## HD   SMM   AWM 
+##29506 27219 33189
 png(paste0(output_dir, "IFNsig_T_UMAP.png"), res = 300, units="in",width = 8, height = 5)
 ggplot(data = plotdf) + 
   geom_point(aes(UMAP_1, UMAP_2, fill=IFN_sig), show.legend = T, shape = 21, stroke = 0) +
@@ -281,7 +284,8 @@ rownames(X) <- gsub("^X", "", rownames(X))
 rownames(X) <- gsub("\\.", "-", rownames(X))
 tmp <- transform(merge(plotdf, X, by="row.names"), row.names=Row.names, Row.names=NULL)
 tmp$Disease <- factor(tmp$Disease, levels = c("HD", "SMM", "AWM"))
-
+nrow(tmp)
+##45,112
 png(paste0(output_dir, "CEBPD_Myeloid_UMAP.png"), res = 300, units="in", width = 8, height = 5)
 ggplot() + 
   geom_point(data=tmp, aes(UMAP_1, UMAP_2, color=CEBPD), show.legend = T) +
@@ -331,6 +335,8 @@ rownames(X) <- gsub("^X", "", rownames(X))
 rownames(X) <- gsub("\\.", "-", rownames(X))
 tmp <- transform(merge(plotdf, X, by="row.names"), row.names=Row.names, Row.names=NULL)
 tmp$Disease <- factor(tmp$Disease, levels = c("HD", "SMM", "AWM"))
+nrow(tmp)
+##89,914
 
 png(paste0(output_dir, "IL2RG_T_UMAP.png"), res = 300, units="in", width = 8, height = 5)
 ggplot() + 

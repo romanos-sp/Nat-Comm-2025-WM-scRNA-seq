@@ -66,6 +66,8 @@ H_df$Cell_ID  <- rownames(H_df)
 meta$Cell_ID <-meta$NewCellID
 h_clust <- transform(merge(H_df, meta, by ="Cell_ID"), row.names=Cell_ID, Cell_ID=NULL)
 write.csv(h_clust, paste0(output_dir, "Merged_Data.csv"), row.names = T)
+nrow(h_clust)
+##48,875
 h_clust_long <- h_clust[, c("UMAP_1", "UMAP_2", "NewCellID", "CaTissueID", c(paste0("S", 1:nsigs)))]
 h_clust_long <- gather(h_clust_long, "Signature", "Expression", -UMAP_1, -UMAP_2, -NewCellID, -CaTissueID)
 h_clust_long$Signature <- factor(gsub("S", "GEX-", h_clust_long$Signature), levels = paste0("GEX-", 1:nsigs))

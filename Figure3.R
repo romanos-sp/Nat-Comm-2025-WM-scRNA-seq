@@ -20,6 +20,8 @@ sub <- readRDS("results/Subclustering_B/tumor_integrated.rds")
 ##Plot annotated tumor UMAP
 plotdf <- FetchData(sub, vars= c("Cell", "UMAP_1", "UMAP_2", "Demux_Sample_ID", "CaTissueID", "NewClonotypeID", "IgH_gene_ct", "IgLC_gene_ct", "cdr3_aa", "cluster", "Annotation", "Tumor_Type", "Tumor_Type2", "Disease"))
 plotdf$Tumor_Type <- factor(plotdf$Tumor_Type, levels = c("WM", "CLL", "UCL"))
+nrow(plotdf)
+##55,488
 png(paste0(output_dir, "Annotated_UMAP_Tumor_Type.png"), res = 300, units="in", width = 8, height = 5)
 ggplot(plotdf) +
   geom_point(aes(UMAP_1, UMAP_2, color = Tumor_Type), stroke = 0.1) + 
@@ -131,6 +133,8 @@ plotdf <- plotdf[plotdf$Tumor_Type %in% "WM",]
 plotdf$CXCR4_mut <- ifelse(is.na(plotdf$CXCR4), "Unknown", as.character(plotdf$CXCR4))
 write.csv(plotdf, paste0(output_dir, "CXCR4_Data.csv"), row.names = T)
 plotdf <- read.csv(paste0(output_dir, "CXCR4_Data.csv"))
+nrow(plotdf)
+##48,875
 plotdf$CXCR4_mut <- factor(plotdf$CXCR4_mut, levels = c("Mut", "WT", "Unknown"))
 a <- ggplot(plotdf) +
   geom_point(aes(UMAP_1, UMAP_2, color = CXCR4_mut)) +
@@ -343,6 +347,8 @@ final_seg <- read.csv(paste0(output_dir, "Tri4_FinalSeg.csv"))
 plotdf$Status <- ifelse(plotdf$Tumor %in% final_seg$sample[final_seg$seg_cons %in% "4a" & final_seg$state %in% "amp"], "Trisomy 4", "No")
 ##Keep WM only
 plotdf <- plotdf[plotdf$Tumor_Type %in% "WM",]
+nrow(plotdf)
+##48,875
 ##Plot
 a <- ggplot(plotdf) +
   geom_point(aes(UMAP_1, UMAP_2, color = Status), show.legend = T) + 

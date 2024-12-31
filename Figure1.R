@@ -703,6 +703,9 @@ rownames(X) <- gsub("^X", "", rownames(X))
 rownames(X) <- gsub("\\.", "-", rownames(X))
 tmp <- transform(merge(plotdf, X, by="row.names"), row.names=Row.names, Row.names=NULL)
 tmp$Disease <- factor(tmp$Disease, levels = c("HD", "SMM", "AWM"))
+table(tmp$Disease)
+##HD   SMM   AWM 
+##15957  5634 23521
 
 png(paste0(output_dir, "MNDA_Myeloid_UMAP.png"), res = 300, units="in", width = 8, height = 5)
 ggplot() + 
