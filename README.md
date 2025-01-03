@@ -26,5 +26,5 @@ Repository holding code for main and supplemental figures from: **Sklavenitis-Pi
 
 -Normalized bulk RNA-seq data from Hunter et al. (DOI: 10.1182/blood-2016-03-708263) was obtained directly from the authors. 
 
--Gene expression profiling data from Trojani et al. (DOI: 10.3390/cancers13081837) was downloaded from GEO (GSE171739; https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE171739).![image](https://github.com/user-attachments/assets/fcbba905-985d-4c5e-910c-68fe86d38d44)
+-Gene expression profiling data from Trojani et al. (DOI: 10.3390/cancers13081837) was downloaded from GEO (GSE171739; https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE171739)
 
