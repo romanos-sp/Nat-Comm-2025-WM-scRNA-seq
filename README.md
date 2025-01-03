@@ -1,5 +1,5 @@
-# Nat-Comm-2024-WM-scRNA-seq
-Repository holding code for main and supplemental figures from: **Sklavenitis-Pistofidis<sup>\*</sup>, Konishi<sup>\*</sup>, et al. Single-cell RNA sequencing defines distinct disease subtypes and reveals hypo-responsiveness to interferon in asymptomatic Waldenstrom’s Macroglobulinemia. 2024. Nat Comm.**
+# Nat-Comm-2025-WM-scRNA-seq
+Repository holding code for main and supplemental figures from: **Sklavenitis-Pistofidis<sup>\*</sup>, Konishi<sup>\*</sup>, et al. Single-cell RNA sequencing defines distinct disease subtypes and reveals hypo-responsiveness to interferon in asymptomatic Waldenstrom’s Macroglobulinemia. 2025. Nat Comm.**
 
 > **Figure 1.** Immune dysregulation is established early in the course of WM with disease-specific immune hallmarks.
 
